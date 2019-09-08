@@ -1,4 +1,5 @@
 #!/bin/bash
+df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }'
 df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' | while read line;
   do
   echo $line
