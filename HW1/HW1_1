@@ -1,6 +1,6 @@
 #!/bin/bash
 lines=$(df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }')
-while read input;
+while read line;
 do
   echo $output
   per=$(echo $output | awk '{ print $2 }' | tr -d %)
