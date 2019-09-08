@@ -1,8 +1,7 @@
 #!/bin/bash
-lines=$(df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }')
-while read line;
-do
-  echo $output
-  per=$(echo $output | awk '{ print $2 }' | tr -d %)
+df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' | while read line;
+  do
+  echo $line
+  per=$(echo $line | awk '{ print $2 }' | tr -d %)
   echo $per
-done < $lines
+done
