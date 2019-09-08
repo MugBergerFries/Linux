@@ -6,5 +6,6 @@ df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' | while read line;
   if [ $per -ge 10 ]; then
   	echo "$disk is above the threshold. Currently at $per % usage" |
   	mail -s '$disk at $per % usage' sjamesberger@gmail.com
+  	echo "$disk is above the threshold. Currently at $per % usage"
   fi
 done
