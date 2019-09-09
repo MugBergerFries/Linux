@@ -1,7 +1,8 @@
 #!/bin/bash
 passed=1
-while :
+while [ $? -ne 151 ]
 do
+  echo "$?"
   df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' | while read line;
     do
     disk=$(echo $line | awk '{ print $1 }')
@@ -11,7 +12,8 @@ do
       mail -s '$disk at $per % usage' root@localhost.localdomain
       echo "$disk is above the threshold. Currently at $per% usage"
       echo "Email sent"
-      exit 1
+      exit 151
     fi
   done
+  if 
 done
