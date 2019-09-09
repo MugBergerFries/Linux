@@ -1,6 +1,6 @@
 #!/bin/bash
-declare -i passed=0
-while [ passed -lt 1 ]
+declare -i passed=1
+while [ passed -lt 2 ]
 do
   df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' | while read line;
     do
@@ -10,7 +10,7 @@ do
       echo "$disk is above the threshold. Currently at $per% usage" |
       mail -s '$disk at $per % usage' root@localhost.localdomain
       echo "$disk is above the threshold. Currently at $per% usage"
-      declare -i passed=$1
+      declare -i passed=2
     fi
   done
   echo "Email sent"
