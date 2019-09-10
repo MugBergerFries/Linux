@@ -27,7 +27,7 @@ echo "Shells:"
 nolognum=$(cat /etc/passwd | grep nologin | wc -l)
 echo "/sbin/nologin: ${nolognum}"
 bashnum=$(cat /etc/passwd | grep bash | wc -l)
-echo /bin/bash: ${bashnum}"
+echo "/bin/bash: ${bashnum}"
 falsenum=$(cat /etc/passwd | grep false | wc -l)
 echo "/bin/false: ${falsenum}"
 echo -e "\nFILESYSTEM INFORMATION ----------------------------------"
