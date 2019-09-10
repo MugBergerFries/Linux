@@ -1,5 +1,0 @@
-#!/bin/bash
-df -H | grep -E '/$|/boot$' | awk '{ print $6 " " $5 }' |
-do
-	per=$(echo $output | awk '{ print $2 }' | tr -d %)
-	echo $per
