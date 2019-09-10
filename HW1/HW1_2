@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "CPU AND MEMORY RESOURCES -------------------------------"
-loadav=$(uptime | awk '{print($8 $9 $10)}')
+loadav=$(uptime | awk '{print($8,  $9,  $10)}')
 fram=$(free -m | grep Mem | awk '{print($4)}')
 echo "CPU Load Average: ${loadav}   Free RAM: ${fram} MB"
 echo -e "\nNETWORK CONNECTIONS--------------------------------"
@@ -23,7 +23,7 @@ usernum=$(cat /etc/passwd | wc -l)
 let "usernum = usernum - 1"
 actnum=$(who | wc -l)
 echo "Total Users: ${usernum}   Number Active: $actnum"
-echo "Shells: 
+echo "Shells:"
 nolognum=$(cat /etc/passwd | grep nologin | wc -l)
 echo "/sbin/nologin: ${nolognum}"
 bashnum=$(cat /etc/passwd | grep bash | wc -l)
