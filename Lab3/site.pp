@@ -1,20 +1,23 @@
 group { "managers":
-    gid => "1999"
+    ensure => "present",
+    gid => "1999",
 }
 
 group { "accounting":
-    gid => "2999"
+    ensure => "present",
+    gid => "2999",
 }
 
 group { "sales":
-    gid => "3999"
+    ensure => "present",
+    gid => "3999",
 }
 
 user { "mscott":
     uid => "1001",
     ensure => present,
     comment => "Michael Scott",
-    gid => "1001"
+    gid => "1001",
     groups => ["managers"],
     shell => "/bin/bash",
     home => "/home/mscott",
@@ -25,7 +28,7 @@ user { "dschrute":
     uid => "1002",
     ensure => present,
     comment => "Dwight Schrute",
-    gid => "1002"
+    gid => "1002",
     groups => ["managers"],
     shell => "/bin/bash",
     home => "/home/dschrute",
@@ -36,7 +39,7 @@ user { "jhalpert":
     uid => "1003",
     ensure => present,
     comment => "Jim Halpert",
-    gid => "1003"
+    gid => "1003",
     groups => ["managers"],
     shell => "/bin/bash",
     home => "/home/jhalpert",
@@ -47,7 +50,7 @@ user { "amartin":
     uid => "2001",
     ensure => present,
     comment => "Angela Martin",
-    gid => "2001"
+    gid => "2001",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/amartin",
@@ -58,7 +61,7 @@ user { "kmalone":
     uid => "2002",
     ensure => present,
     comment => "Kevin Malone",
-    gid => "2002"
+    gid => "2002",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/kmalone",
@@ -69,7 +72,7 @@ user { "omartinez":
     uid => "2003",
     ensure => present,
     comment => "Oscar Martinez",
-    gid => "2003"
+    gid => "2003",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/omartinez",
@@ -80,7 +83,7 @@ user { "tflenderson":
     uid => "2004",
     ensure => present,
     comment => "Toby Flenderson",
-    gid => "2004"
+    gid => "2004",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/tflenderson",
@@ -91,7 +94,7 @@ user { "cbratton":
     uid => "2005",
     ensure => present,
     comment => "Creed Bratton",
-    gid => "2005"
+    gid => "2005",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/cbratton",
@@ -102,7 +105,7 @@ user { "dphilbin":
     uid => "2006",
     ensure => present,
     comment => "Darryl Philbin",
-    gid => "2006"
+    gid => "2006",
     groups => ["accounting"],
     shell => "/bin/bash",
     home => "/home/dphilbin",
@@ -113,7 +116,7 @@ user { "abernard":
     uid => "3001",
     ensure => present,
     comment => "Andy Bernard",
-    gid => "3001"
+    gid => "3001",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/abernard",
@@ -124,7 +127,7 @@ user { "plapin":
     uid => "3002",
     ensure => present,
     comment => "Phyllis Lapin",
-    gid => "3002"
+    gid => "3002",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/plapin",
@@ -135,7 +138,7 @@ user { "shudson":
     uid => "3003",
     ensure => present,
     comment => "Stanley Hudson",
-    gid => "3003"
+    gid => "3003",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/shudson",
@@ -146,7 +149,7 @@ user { "mpalmer":
     uid => "3004",
     ensure => present,
     comment => "Meredith Palmer",
-    gid => "3004"
+    gid => "3004",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/mpalmer",
@@ -157,7 +160,7 @@ user { "kkapoor":
     uid => "3005",
     ensure => present,
     comment => "Kelly Kapoor",
-    gid => "3005"
+    gid => "3005",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/kkapoor",
@@ -168,7 +171,7 @@ user { "pbeesly":
     uid => "3006",
     ensure => present,
     comment => "Pam Beesly",
-    gid => "3006"
+    gid => "3006",
     groups => ["sales"],
     shell => "/bin/bash",
     home => "/home/pbeesly",
