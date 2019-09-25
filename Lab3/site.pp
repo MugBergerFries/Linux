@@ -167,7 +167,7 @@ file { "/home/managers":
     ensure => "directory",
     owner => "mscott",
     group => "managers",
-    mode => "0770",
+    mode => "2770",
     recurse => true,
 }
 
@@ -175,7 +175,7 @@ file { "/home/accounting":
     ensure => "directory",
     owner => "amartin",
     group => "accounting",
-    mode => "0770",
+    mode => "2770",
     recurse => true,
 }
 
@@ -183,6 +183,6 @@ file { "/home/sales":
     ensure => "directory",
     owner => "abernard",
     group => "sales",
-    mode => "0770",
+    mode => "2770",
     recurse => true,
 }
