@@ -183,7 +183,7 @@ file { "/home/managers":
     owner => "mscott",
     group => "managers",
     mode => "0770",
-    recursive => "true",
+    recursive => true,
 }
 
 file { "/home/accounting":
@@ -191,7 +191,7 @@ file { "/home/accounting":
     owner => "amartin",
     group => "accounting",
     mode => "0770",
-    recursive => "true",
+    recursive => true,
 }
 
 file { "/home/sales":
@@ -199,5 +199,5 @@ file { "/home/sales":
     owner => "abernard",
     group => "sales",
     mode => "0770",
-    recursive => "true",
+    recursive => true,
 }
