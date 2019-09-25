@@ -1,0 +1,21 @@
+Lab 2 Submission Notes
+Steps
+1. pvcreate /dev/sdb *create the new physical volume (assuming sdb is the new hard drive)
+2. vgcreate vg_new /dev/sdb *create the volume group
+3. lvcreate -L 4g -n lv_home *create lv_home with 4 gigs
+4. lvcreate -L 1g -n lv_tmp *create lv_tmp with 1 gig
+5. mkfs.xfs /dev/vg_new/lv_home *create XFS filesystem for home
+6. mkfs.xfs /dev/vg_new/lv_tmp *create XFS filesystem for tmp
+7. mount /dev/vg_new/lv_home /homemt
+8. mount /dev/vg_new/lv_tmp /tmpmt
+9. cp -r /home/* /homemt *copy home to homemt
+10. cp -r /tmp/* /tmpmt *copy tmp to tmpmt
+11. add "/dev/vg_new/lv_home /home xfs defaults 0 0" to /etc/fstab
+12. add "/dev/vg_new/lv_tmp /tmp xfs defaults 0 0" to /etc/fstab
+13. at this point, the old disk blocks have not been freed. To do this, run
+	rm -r /home/*
+	rm -r /tmp/*
+
+NOTE: This assignment was completed without access to my virtual machine to test any of this
+	Apologies if it is incorrect, I would love to discuss any mistakes I made
+	To better learn
