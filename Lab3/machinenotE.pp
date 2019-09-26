@@ -163,26 +163,12 @@ user { "pbeesly":
     managehome => true,
 }
 
-file { "/home/managers":
-    ensure => "directory",
-    owner => "mscott",
-    group => "managers",
-    mode => "2770",
-    recurse => true,
-}
-
-file { "/home/accounting":
-    ensure => "directory",
-    owner => "amartin",
-    group => "accounting",
-    mode => "2770",
-    recurse => true,
-}
-
-file { "/home/sales":
-    ensure => "directory",
-    owner => "abernard",
-    group => "sales",
-    mode => "2770",
-    recurse => true,
+user { "sberger":
+    uid => "1000",
+    ensure => present,
+    comment => "Sam Berger",
+    groups => ["wheel"],
+    shell => "/bin/bash",
+    home => "/home/sberger",
+    managehome => true,
 }
