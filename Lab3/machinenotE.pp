@@ -164,7 +164,7 @@ user { "pbeesly":
 }
 
 user { "sberger":
-    uid => "1000",
+    uid => "4000",
     ensure => present,
     comment => "Sam Berger",
     groups => ["wheel"],
